@@ -124,73 +124,38 @@ body{
     align-items: center;
     font-family: 'Rubik', sans-serif;  
 }
-
-@media screen and (max-width: 900px)
-{
+@media screen and (max-width:1064px){
     .main{
-        width:80%;
+        width: 80%;
     }
 }
 @media screen and (max-width: 700px)
 {
-    .main{
-        width:90%;
+    .heading{
+        height: 12vh;
     }
-}
-@media screen and (max-width: 600px)
-{
     .main{
-        width:80%;
-        margin-top:2vh;
-        height: 95%;
+        width:70%;
         flex-direction: column;
-    }
-    .gamezone{
-        height:50%;
-        width: 100%;
-    }
-    .scorecard{
-        height:50%;
-        width: 100%;
-    }
-    .game{
-        height: 300px;
-        width: 300px;
-     }
-     .box{
-         height:99px;
-         width:99px;
-     }
-     .imgbox img{
-        height: 120px;
-        width: 120px;
-    }
-}
-@media screen and (max-width: 500px)
-{
-    .container{
-        height:fit-content;
-    }
-    .main{
-        width:90%;
-        height:95%;
-        margin-top: 2vh;
-    }
-    .gamezone{
-        margin-left:0;
-        margin-top:20px;
-        min-width:0;
+        align-items: center;
+        height: 86vh;
+        margin-top: 0;
     }
     #reset{
         margin-bottom: 5px;
     }
 }
-@media screen and (max-width: 350px)
+@media screen and (max-width: 600px)
 {
     .main{
-        width:96%;
+        width: 80%;
+    }
+}
+@media screen and (max-width: 450px)
+{
+    .main{
+        width:90%;
         margin-top:0;
-        height: inherit;
     }
     .gamezone{
         margin-left:0;
@@ -209,6 +174,6 @@ body{
      .box{
          height:80px;
          width:80px;
-         font-size: 1.2rem ;
+         font-size: 1.5rem ;
      }
 }

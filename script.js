@@ -11,6 +11,8 @@ const changeTurn  = () =>{
     return turn === "X"?"0":"X";
 }
 
+var cnt=0
+
 const chkwin = () => {
     let boxtxt= document.getElementsByClassName("boxtext")
     let wins=[
@@ -40,6 +42,7 @@ reset.addEventListener('click', ()=>{
     })
     turn = "X"
     isgameover= false
+    cnt=0
     document.querySelector('.imgbox').getElementsByTagName('img')[0].style.display = "none"
     document.querySelector('.info').innerText = "Turn for " + turn
 })
@@ -55,10 +58,13 @@ Array.from(boxes).forEach(elm =>{
             {elm.style.color="rgba(40,40,240,0.9)"}
             boxtext.innerText=turn;
             turn = changeTurn();
+            cnt+=1;
             click.play();
-            chkwin();            
-            if(!isgameover)
+            chkwin();         
+            if(!isgameover && cnt!=9)
                 document.getElementsByClassName("info")[0].innerText = "Turn for " + turn
+            if(cnt==9 && !isgameover)
+                document.getElementsByClassName("info")[0].innerText = "Game Over"   
         }
     })
 })
